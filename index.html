@@ -20,6 +20,22 @@
             height: auto;
             display: block;
         }
+        @media (orientation: portrait) and (max-width: 1023px) {
+            html, body {
+                height: 100%;
+                overflow: hidden;
+            }
+            body {
+                display: block;
+                min-height: 0;
+            }
+            img {
+                width: 100vw;
+                height: 100dvh;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
         @media (min-width: 1024px) {
             body {
                 height: 100dvh;
@@ -34,6 +50,9 @@
     </style>
 </head>
 <body>
-    <img src="sonic_odyssey.jpg" alt="Sonic_Odyssey">
+    <picture>
+        <source media="(orientation: portrait) and (max-width: 1023px)" srcset="sonic_odyssey_mobile.jpg">
+        <img src="sonic_odyssey.jpg" alt="Sonic Odyssey">
+    </picture>
 </body>
 </html>
