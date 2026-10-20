@@ -15,8 +15,14 @@
         img {
             width: 100vw;
             height: 100vh;
-            /*object-fit: contain; */
+            height: 100dvh;
+            object-fit: fill;
             display: block;
+        }
+        @media (max-width: 900px) {
+            img {
+                object-fit: contain;
+            }
         }
     </style>
 </head>
